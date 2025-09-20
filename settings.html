@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xsum - Pengaturan</title>
+    <link rel="stylesheet" href="styles/settings.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔧 Pengaturan xsum</h1>
+            <p class="subtitle">Konfigurasi preferensi dan API key untuk extension</p>
+        </header>
+
+        <main class="main-content">
+            <!-- AI Model Selection -->
+            <section class="settings-section">
+                <h2>🤖 Model AI</h2>
+                <p class="section-description">Pilih model AI yang ingin digunakan untuk meringkas konten</p>
+                
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="aiModel" value="openai" id="openai-radio">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>OpenAI GPT-3.5</strong>
+                            <p>Model AI dari OpenAI yang powerful dan akurat</p>
+                        </div>
+                    </label>
+                    
+                    <label class="radio-option">
+                        <input type="radio" name="aiModel" value="gemini" id="gemini-radio">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <strong>Google Gemini</strong>
+                            <p>Model AI dari Google yang cepat dan efisien</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
+            <!-- API Key Configuration -->
+            <section class="settings-section">
+                <h2>🔑 API Key</h2>
+                <p class="section-description">Masukkan API key untuk model AI yang dipilih</p>
+                
+                <div class="api-key-container">
+                    <div class="input-group">
+                        <label for="apiKey" class="input-label">API Key:</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="apiKey" placeholder="Masukkan API key Anda..." class="api-input">
+                            <button type="button" id="toggleApiKey" class="toggle-btn" title="Tampilkan/Sembunyikan API Key">👁️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="api-status" id="apiStatus">
+                        <span class="status-indicator" id="statusIndicator">⚪</span>
+                        <span class="status-text" id="statusText">Belum divalidasi</span>
+                    </div>
+                    
+                    <button type="button" id="validateBtn" class="validate-btn">Validasi API Key</button>
+                </div>
+                
+                <div class="api-help">
+                    <details>
+                        <summary>📖 Cara mendapatkan API Key</summary>
+                        <div class="help-content">
+                            <h4>OpenAI API Key:</h4>
+                            <ol>
+                                <li>Kunjungi <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API Keys</a></li>
+                                <li>Login atau buat akun OpenAI</li>
+                                <li>Klik "Create new secret key"</li>
+                                <li>Copy API key dan paste di sini</li>
+                            </ol>
+                            
+                            <h4>Google Gemini API Key:</h4>
+                            <ol>
+                                <li>Kunjungi <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
+                                <li>Login dengan akun Google</li>
+                                <li>Klik "Create API Key"</li>
+                                <li>Copy API key dan paste di sini</li>
+                            </ol>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Theme Selection -->
+            <section class="settings-section">
+                <h2>🎨 Tema</h2>
+                <p class="section-description">Pilih tema tampilan untuk extension</p>
+                
+                <div class="theme-options">
+                    <label class="theme-option">
+                        <input type="radio" name="theme" value="light" id="light-theme">
+                        <div class="theme-preview light-preview">
+                            <div class="theme-header"></div>
+                            <div class="theme-content"></div>
+                        </div>
+                        <span class="theme-label">☀️ Light</span>
+                    </label>
+                    
+                    <label class="theme-option">
+                        <input type="radio" name="theme" value="dark" id="dark-theme">
+                        <div class="theme-preview dark-preview">
+                            <div class="theme-header"></div>
+                            <div class="theme-content"></div>
+                        </div>
+                        <span class="theme-label">🌙 Dark</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Advanced Settings -->
+            <section class="settings-section">
+                <h2>⚙️ Pengaturan Lanjutan</h2>
+                <p class="section-description">Konfigurasi tambahan untuk extension</p>
+                
+                <div class="advanced-options">
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="autoSummary">
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                            <strong>Auto Summary</strong>
+                            <p>Otomatis buat ringkasan saat membuka halaman X/Twitter</p>
+                        </div>
+                    </label>
+                    
+                    <label class="checkbox-option">
+                        <input type="checkbox" id="saveHistory">
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                            <strong>Simpan Riwayat</strong>
+                            <p>Simpan riwayat ringkasan yang telah dibuat</p>
+                        </div>
+                    </label>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-actions">
+                <button type="button" id="resetBtn" class="reset-btn">🔄 Reset ke Default</button>
+                <div class="primary-actions">
+                    <button type="button" id="cancelBtn" class="cancel-btn">Batal</button>
+                    <button type="button" id="saveBtn" class="save-btn">💾 Simpan Pengaturan</button>
+                </div>
+            </div>
+            
+            <div class="footer-info">
+                <p>xsum Extension v1.0.0</p>
+                <p>Dibuat dengan ❤️ untuk meringkas konten X/Twitter</p>
+            </div>
+        </footer>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Memvalidasi API Key...</p>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="message success-message" style="display: none;">
+            <span class="message-icon">✅</span>
+            <span class="message-text">Pengaturan berhasil disimpan!</span>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="message error-message" style="display: none;">
+            <span class="message-icon">❌</span>
+            <span class="message-text" id="errorText">Terjadi kesalahan!</span>
+        </div>
+    </div>
+
+    <script src="scripts/settings.js"></script>
+</body>
+</html>
