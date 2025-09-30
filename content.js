@@ -1,4 +1,4 @@
-// Content script for xsum extension
+// Content script for ETM: Explain To Me extension
 // This script runs on X/Twitter pages to extract content
 
 (function() {
@@ -163,7 +163,7 @@
     
     // Initialize content script
     if (isValidTwitterPage()) {
-        console.log('xsum content script loaded');
+        console.log('ETM: Explain To Me content script loaded');
         
         // Add a small indicator that the extension is active (optional)
         const indicator = document.createElement('div');

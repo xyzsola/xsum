@@ -1,4 +1,4 @@
-# xsum - Browser Extension
+# ETM: Explain To Me - Browser Extension
 
 Extension browser untuk meringkas informasi dari konten di X/Twitter menggunakan AI.
 
@@ -141,5 +141,5 @@ Silakan buat issue atau pull request untuk perbaikan dan fitur baru.
 
 ---
 
-**xsum Extension v1.0.0**  
+**ETM: Explain To Me Extension v1.0.0**  
 Dibuat dengan ❤️ untuk meringkas konten X/Twitter

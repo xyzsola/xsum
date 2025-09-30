@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "xsum",
+  "name": "ETM: Explain To Me",
   "version": "1.0.0",
   "description": "Meringkas informasi dari konten di X/Twitter menggunakan AI",
   "permissions": [
@@ -17,7 +17,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "xsum",
+    "default_title": "ETM: Explain To Me",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

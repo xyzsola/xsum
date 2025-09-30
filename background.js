@@ -1,4 +1,4 @@
-// Background script for xsum extension
+// Background script for ETM: Explain To Me extension
 // Handles AI API calls and message passing
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
